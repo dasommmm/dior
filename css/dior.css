@@ -1,0 +1,171 @@
+:root{
+    --footer--color:#757575;
+    --font--color:#000000;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 40px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+header a{
+    color: var(--font--color);
+    margin-right: 13px;
+    /* 아이콘들한테는 왜 이렇게 먹히는지ㅜㅜ */
+    font-size: 13px;
+}
+
+.tap{
+    display: flex;
+    
+}
+
+.logo svg{
+    height: 1.5rem;
+    width: auto;
+}
+
+h1{
+    height: 20px;
+}
+
+.hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip-path: inset(0px 0px 99.9% 99.9%);
+    overflow: hidden;
+}
+
+.icons{
+    display: flex;
+    width: 200px;
+    justify-content: flex-end;
+}
+
+.icons li{
+    margin-left: 13px;
+    height: 20px;
+    /* 가운데 정렬이 안돼서 heigth 20을 h1이랑 얘한테 줬는데
+    이렇게 하는게 맞나요ㅠㅠ */
+}
+
+section{
+    margin: 20px;
+}
+
+.video-wrapper h2{
+    font-size: 22px;
+    text-align: center;
+    padding: 80px 0;
+    width: 100%;
+    
+}
+
+.video-wrapper{
+    box-sizing: border-box;
+    position: relative;
+}
+
+video{
+    width: 100%;
+    /* padding: 10px; */
+    max-width: 100%;
+    height: 100%;    
+}
+/* 비디오 반응형 어떻게 이렇게 될까요? 동영상이 다른것 같은데
+줄어들면 html에 동영상 다른걸로 바꿔줄 수 있나유ㅠㅠ 요 밑처럼영?? */
+.small-video{
+    display: none;
+}
+
+@media screen and (max-width:900px){
+    .big-video{
+        display: none;
+    }
+    .small-video{
+        display: block;
+    }
+    section{
+        margin: 0;
+    }
+}
+
+.all{
+    text-align: center;
+    margin-top: 80px;
+}
+
+.all h2{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.all button{
+    width: 124px;
+    height: 48px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 24px;
+    margin-bottom: 80px;
+}
+
+.link-a{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+/* a가 전체를 다 덮어버렸어요@!!ㅜㅜㅜ */
+
+.women-bags{
+    position: relative;
+    display: grid;
+    margin-top: 50px;
+    width: 100%;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,auto);
+    grid-column-gap: 30px;
+    grid-template-areas: 
+    "A1 A2 A3 A4" 
+    "B1 B2 B3 B4"
+    ;
+}
+
+.a.a1{
+    grid-area: A1;
+}
+
+.a.a2{
+    grid-area: A2;
+}
+
+.a.a3{
+    grid-area: A3;
+}
+
+.a.a4{
+    grid-area: A4;
+}
+
+.b.a1{
+    grid-area: B1;
+}
+
+.b.b2{
+    grid-area: B2;
+}
+
+.b.b3{
+    grid-area: B3;
+}
+
+.b.b4{
+    grid-area: B4;
+}

@@ -19,6 +19,7 @@ header a{
     font-size: 13px;
 }
 
+
 .tap{
     display: flex;
     
@@ -55,7 +56,9 @@ h1{
 }
 
 section{
-    margin: 20px;
+    padding: 0 20px;
+    max-width: 1440px;
+    margin: 20px auto;
 }
 
 .video-wrapper h2{
@@ -67,21 +70,32 @@ section{
 }
 
 .video-wrapper{
-    box-sizing: border-box;
     position: relative;
 }
 
-video{
-    width: 100%;
-    /* padding: 10px; */
+.video-con{
     max-width: 100%;
+    
+}
+
+video{
+    box-sizing: border-box;
+    width: 100%;
     height: 100%;    
+    /* padding: 0 60px; */
 }
 /* 비디오 반응형 어떻게 이렇게 될까요? 동영상이 다른것 같은데
 줄어들면 html에 동영상 다른걸로 바꿔줄 수 있나유ㅠㅠ 요 밑처럼영?? */
 .small-video{
     display: none;
 }
+
+/* @media screen and (min-width:1440px) {
+    section{
+        width: 1440px;
+        margin: 20px auto;
+    }
+} */
 
 @media screen and (max-width:900px){
     .big-video{
@@ -91,7 +105,10 @@ video{
         display: block;
     }
     section{
-        margin: 0;
+        padding: 0;
+    }
+    .women-bags,#men{
+        padding: 20px;
     }
 }
 
@@ -115,25 +132,34 @@ video{
 }
 
 .link-a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #000000;
+}
+
+/* .link-a{
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 1;
-}
+} */
 /* a가 전체를 다 덮어버렸어요@!!ㅜㅜㅜ */
 
 .women-bags{
     position: relative;
     display: grid;
     margin-top: 50px;
+    margin-bottom: 80px;
     width: 100%;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(2,auto);
     grid-column-gap: 30px;
+    grid-row-gap: 50px;
     grid-template-areas: 
-    "A1 A2 A3 A4" 
+    "A1 A2 A3 A4"
     "B1 B2 B3 B4"
     ;
 }
@@ -168,4 +194,58 @@ video{
 
 .b.b4{
     grid-area: B4;
+}
+
+.women-bags h3{
+    margin: 10px;
+}
+
+#men h2{
+    font-size: 22px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+
+.men-bag1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.mens-pic{
+    flex-basis: 100%
+}
+
+.men-saddle,.men-cross{
+    flex-basis: calc((100% - 2.7777777778%) / 2);
+    /* 이게 머에요,,,,,?? */
+}
+
+.men-bag1 p{
+    margin-top: 10px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.men-bag2{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 80px;
+}
+
+.men-bag2 h3{
+    margin-top: 10px;
+    color: #000000;
+}
+
+.men-bag2 li{
+    margin-bottom: 40px;
+    flex-basis: calc((100% - 3 * 2.7777777778%) / 4);
+    /* flex-basis: 33.333%; */
+    /* 캐리어백이 크기가 작은데 이 방법 말고 다른방법 뭐가있나요? */
 }

@@ -47,6 +47,10 @@ img{
     /* 왜? */
 }
 
+svg{
+	display: block;
+}
+
 a{
 	text-decoration: none;
 	/* display: block; */

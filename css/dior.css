@@ -14,9 +14,10 @@ header{
 
 header a{
     color: var(--font--color);
-    margin-right: 13px;
     /* 아이콘들한테는 왜 이렇게 먹히는지ㅜㅜ */
     font-size: 13px;
+    display: block;
+    /* a커서 가운데 정렬 안되는거 막음 */
 }
 
 
@@ -25,14 +26,19 @@ header a{
     
 }
 
+.tap a{
+    margin-right: 13px;
+    
+}
+
 .logo svg{
     height: 1.5rem;
     width: auto;
 }
 
-h1{
+/* h1{
     height: 20px;
-}
+} */
 
 .hidden{
     position: absolute;
@@ -50,9 +56,11 @@ h1{
 
 .icons li{
     margin-left: 13px;
-    height: 20px;
+    /* height: 20px; */
     /* 가운데 정렬이 안돼서 heigth 20을 h1이랑 얘한테 줬는데
-    이렇게 하는게 맞나요ㅠㅠ 글고 돋보기에 input search 넣어야하는데
+    이렇게 하는게 맞나요ㅠㅠ a가 커서 가운데 정렬 안됨 display block주면 됨
+    logo svg에 블록하면 됨 h1에 굳이 하잇스20 안주고 인라인블록이라 안된ㄱ임
+    글고 돋보기에 input search 넣어야하는데
     아이콘 눌러야 나오는 형식이고 반응형도 있어서 잘 모르겠어요! */
 }
 
@@ -141,7 +149,9 @@ video{
     color: #000000;
 }
 /* a가 감싸는걸로 바꿨는데 저 속성을 안줘도 알맞게 선택이
-되는 것 같아요 이때는 위에 속성들 지워주나요?? */
+되는 것 같아요 이때는 위에 속성들 지워주나요??
+마진에 커서 안돼서 위 속성 써줘야해 */
+
 
 /* .link-a{
     position: absolute;
@@ -151,7 +161,10 @@ video{
     right: 0;
     z-index: 1;
 } */
-/* a가 전체를 다 덮어버렸어요@!!ㅜㅜㅜ */
+/* a가 전체를 다 덮어버렸어요@!!ㅜㅜㅜ 
+a 를 감싸는 li에 relative주면 먹힘!! 
+만약 글씨만(h2) 선택되게 하고싶다면 a태그보다 앞 글씨에 z-index 
+2로 주면 됨*/
 
 .women-bags{
     position: relative;
@@ -226,7 +239,8 @@ video{
 
 .men-saddle,.men-cross{
     flex-basis: calc((100% - 2.7777777778%) / 2);
-    /* 이게 머에요,,,,,?? */
+    /* 이게 머에요,,,,,?? 1440 40 비율상 100%-40px 이게 깔끔
+    여백만들려고 2뻼*/
 }
 
 .men-bag1 p{
@@ -251,8 +265,48 @@ video{
 .men-bag2 li{
     margin-bottom: 40px;
     flex-basis: calc((100% - 3 * 2.7777777778%) / 4);
-    /* 이거 함수인건 알겠는데 3*2.7 이 의미는 머에요? */
+    /* 이거 함수인건 알겠는데 3*2.7 이 의미는 머에요? 2.7=40px */
+    /* 컨테이너 크기-간격의 갯수*간격넓이 /컨탠츠 갯수 여백을 위해 */
+    /* 100%=1440px 2.77778%=40px (40/1440)*/
     /* flex-basis: 33.333%; */
     /* 캐리어백이미지 크기가 혼자 
     작은데 이 방법 말고 다른방법 뭐가있나요? */
 }
+
+.move-container{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    height: 100px;
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+
+}
+
+.white-box{
+    background: linear-gradient(to right,white,transparent) ;
+    width: 20px;
+    height: 100px;
+}
+
+.left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+}
+
+.right{
+    display: flex;
+}
+
+.right div{
+    display: flex;
+    margin: 0 7px;
+}
+
+.right>div a{
+    display: block;
+}
+
+

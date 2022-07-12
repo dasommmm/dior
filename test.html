@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 100px;
+            border: 1px solid #ebebeb;
+            display: flex;
+            align-items: center;
+            padding-left: 32px;
+        }
+        .move-wrapper{
+            overflow: hidden;
+        }
+        .move{
+            animation: to-left 10s infinite linear;
+        }
+        @keyframes to-left {
+            from{
+                transform: translateX(100%);
+            }
+            to{
+                transform: translateX(-100%);
+            }
+        }
+        .stop{
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="checkbox">
+        <div class="move-wrapper">
+            <p class="move stop">
+                여기에 글씨 여기에 글씨 여기에 글씨 여기에 글씨 여기에 글씨
+            </p>
+        </div>
+    </div>
+</body>
+</html>

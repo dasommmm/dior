@@ -278,6 +278,7 @@ a 를 감싸는 li에 relative주면 먹힘!!
     align-items: center;
     /* justify-content: center; */
     height: 100px;
+    /* width: 100%; */
     border-top: 1px solid #e4e4e4;
     border-bottom: 1px solid #e4e4e4;
 
@@ -296,6 +297,18 @@ a 를 감싸는 li에 relative주면 먹힘!!
     width: 84px;
     /* background-color: white */
     background: linear-gradient(to right,white 80%,transparent 20%);
+}
+
+.left input{
+    /* display: none; */
+}
+
+.play-button:checked .move{
+    animation-play-state: paused;
+}
+
+.paly-button:checked .move:hover{
+    animation-play-state: running;
 }
 
 .pause{
@@ -319,14 +332,14 @@ a 를 감싸는 li에 relative주면 먹힘!!
     text-align: center;
 }
 
+.stop{
+    /* animation-play-state: paused; */
+}
 .move{
     animation: to-left 10s infinite linear;
-    z-index: -2;
+    /* z-index: -2; */
 }
 
-.stop{
-    animation-play-state: paused;
-}
 
 @keyframes to-left{
     from{

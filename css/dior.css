@@ -284,20 +284,29 @@ a 를 감싸는 li에 relative주면 먹힘!!
 }
 
 .white-box{
-    background: linear-gradient(to right,white,transparent) ;
     width: 20px;
     height: 100px;
+    /* flex-basis: 30%; */
 }
 
 .left{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 64px;
+    width: 84px;
+    /* background-color: white */
+    background: linear-gradient(to right,white 80%,transparent 20%);
+}
+
+.pause{
+    /* flex-basis: 70%; */
 }
 
 .right{
     display: flex;
+    font-size: 13px;
+    line-height: 20px;
+    overflow: hidden;
 }
 
 .right div{
@@ -307,6 +316,25 @@ a 를 감싸는 li에 relative주면 먹힘!!
 
 .right>div a{
     display: block;
+    text-align: center;
+}
+
+.move{
+    animation: to-left 10s infinite linear;
+    z-index: -2;
+}
+
+.stop{
+    animation-play-state: paused;
+}
+
+@keyframes to-left{
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
 }
 
 

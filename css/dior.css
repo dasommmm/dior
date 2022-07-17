@@ -372,12 +372,15 @@ a 를 감싸는 li에 relative주면 먹힘!!
 }
 
 .nav-wrapper{
+    display: flex;
     padding: 32px 20px 0;
 }
 
 .column{
+    width: 30%;
     display: flex;
     flex-direction: column;
+    margin-right: 20px;
 }
 
 .news span{
@@ -425,8 +428,8 @@ a 를 감싸는 li에 relative주면 먹힘!!
 
 .boutique{
     margin-top: 20px;
-    border-top: 1px solid #e4e4e4;
-    border-bottom: 1px solid #e4e4e4;
+    /* border-top: 1px solid #e4e4e4; */
+    /* border-bottom: 1px solid #e4e4e4; */
     /* position: relative; */
     display: flex;
     flex-direction: column;
@@ -449,11 +452,19 @@ a 를 감싸는 li에 relative주면 먹힘!!
 }
 
 nav{
-    padding-top: 32px;
+    display: flex;
+    width: 100%;
+    /* padding-top: 32px; */
     font-size: 13px;
     font-family: Century Gothic Std,arial,sans-serif;
     color: #000000;
     line-height: 3;
+    background-color: white;
+}
+
+.one,.two,.three{
+    flex-basis: 33.333%;
+    overflow: hidden;
 }
 
 nav a{
@@ -468,4 +479,27 @@ nav h4{
 
 nav input{
     display: none;
+}
+
+nav label{
+    z-index: 2;
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    cursor: pointer;
+
+}
+
+.small{
+    transform: translateY(-100px);
+    position: absolute;
+    z-index: -1;
+    visibility: hidden;
+}
+
+nav input:checked + ul{
+    transition: 0.5s;
+    transform: none;
+    visibility: visible;
+    position: static;
 }

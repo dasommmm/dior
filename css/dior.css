@@ -34,6 +34,7 @@ header a{
 .logo svg{
     height: 1.5rem;
     width: auto;
+    display: block;
 }
 
 /* h1{
@@ -373,7 +374,7 @@ a 를 감싸는 li에 relative주면 먹힘!!
 
 .nav-wrapper{
     display: flex;
-    padding: 32px 20px 0;
+    padding: 32px 40px 0;
 }
 
 .column{
@@ -398,6 +399,7 @@ a 를 감싸는 li에 relative주면 먹힘!!
 }
 
 .under{
+    display: none;
     border-bottom: 1px solid black;
     font-family: Century Gothic Std,arial,sans-serif;
     font-size: 13px;
@@ -503,3 +505,20 @@ nav input:checked + ul{
     visibility: visible;
     position: static;
 }
+
+.under-line{
+    border-bottom: 1px solid black;
+}
+
+.nation div{
+    display: flex;
+    align-items: center;
+    /* text-decoration: underline; */
+}
+
+.language div{
+    display: flex;
+    align-items: center;
+
+}
+

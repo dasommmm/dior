@@ -299,15 +299,12 @@ a 를 감싸는 li에 relative주면 먹힘!!
     background: linear-gradient(to right,white 80%,transparent 20%);
 }
 
-.left input{
-    /* display: none; */
-}
 
-.play-button:checked .move{
+#play-button:checked .move{
     animation-play-state: paused;
 }
 
-.paly-button:checked .move:hover{
+#paly-button:checked .move:hover{
     animation-play-state: running;
 }
 
@@ -332,9 +329,7 @@ a 를 감싸는 li에 relative주면 먹힘!!
     text-align: center;
 }
 
-.stop{
-    /* animation-play-state: paused; */
-}
+
 .move{
     animation: to-left 10s infinite linear;
     /* z-index: -2; */

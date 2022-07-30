@@ -8,6 +8,7 @@
     <style>
         .container{
             height: 100px;
+            width: 100%;
             border: 1px solid #ebebeb;
             display: flex;
             align-items: center;
@@ -15,9 +16,20 @@
         }
         .move-wrapper{
             overflow: hidden;
+            width: 100%;
         }
         .move{
-            animation: to-left 10s infinite linear;
+            animation: to-left 50s infinite linear;
+
+        }
+
+        input:checked + div >.move{
+            animation-play-state: paused;
+        }
+
+        input:checked + div > .move:hover{
+            animation-play-state: running;
+
         }
         @keyframes to-left {
             from{
@@ -27,9 +39,9 @@
                 transform: translateX(-100%);
             }
         }
-        .stop{
+        /* .stop{
             animation-play-state: paused;
-        }
+        } */
     </style>
 </head>
 <body>

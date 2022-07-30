@@ -109,7 +109,7 @@ video{
     }
 } */
 
-@media screen and (max-width:900px){
+@media screen and (max-width:760px){
     .big-video{
         display: none;
     }
@@ -141,6 +141,7 @@ video{
     border: 1px solid black;
     border-radius: 24px;
     margin-bottom: 80px;
+    cursor: pointer;
 }
 
 .link-a{
@@ -305,7 +306,7 @@ a 를 감싸는 li에 relative주면 먹힘!!
     animation-play-state: paused;
 }
 
-#paly-button:checked .move:hover{
+#play-button:checked .move:hover{
     animation-play-state: running;
 }
 
@@ -332,7 +333,8 @@ a 를 감싸는 li에 relative주면 먹힘!!
 
 
 .move{
-    animation: to-left 10s infinite linear;
+    animation: to-left 20s infinite linear;
+    max-width: 100%;
     /* z-index: -2; */
 }
 
